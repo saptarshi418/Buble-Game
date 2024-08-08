@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(139, 194, 139);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+#panel{
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+}
+#tpnl{
+    height: 100px;
+    width: 100%;
+    color: #ffff;
+    padding: 0px 30%;
+    background-color: rgb(16, 80, 38);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_elm{
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    
+}
+    
+.nav_box{
+    padding: 10px 20px;
+    background-color: #ffff;
+    border-radius: 5px;
+    color: rgb(16, 80, 38);
+    font-size: 25px;
+    font-weight: 600;
+    
+}
+.nav_box h2{
+    font-weight: 600;
+    font-size: 22px;
+}
+#bpnl{
+    height:calc(100%-100px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 25px;
+    display: flex;
+    gap: 10px;
+    /* padding-bottom: 15px; */
+    flex-wrap: wrap;
+    /* background-color: aqua; */
+    
+}
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(16, 80, 38);
+    color: #ffff;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: 600;
+
+}
+.bubble:hover{
+    background-color: rgb(3, 43, 17);
+    cursor: pointer;
+}
+#return_gm_ovr{
+    height: 200px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    color: #000;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 100px;
+    background-color: rgb(102, 165, 124);
+    flex-direction: column;
+    
+}
+
+#return_gm_ovr button{
+    height: 30px;
+    width: 100px;
+    margin-top: 120px;
+    position: absolute;
+    background-color: #ffff;
+    border: 1px solid #000;
+    box-shadow: 10px 10px 5px rgb(15, 52, 64);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
