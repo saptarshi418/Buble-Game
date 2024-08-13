@@ -2,6 +2,36 @@ var timer = 60;
 var score =0;
 var target_num;
 var re_start_btn;
+var strt_btn;
+var flagg = 0;
+
+
+strt_btn=document.querySelector(".nav_button");
+scoreValRef = document.querySelector("#scoreval")
+strt_btn.addEventListener("click",()=>{
+    if(flagg==0){
+        makebubble();
+        runtimer();
+        newhit();
+        flagg++;
+        // flagg = !flagg;
+        document.querySelector(".nav_button").textContent="RESET GAME";
+        
+    }
+    else{
+        // makebubble();
+        // runtimer();
+        // newhit();
+        timer = 60;
+        score = 0;
+        scoreValRef.textContent = score;
+        reset_func();
+        flagg = 0;
+        // document.querySelector(".nav_button").textContent="START GAME";
+
+        // flagg = !flagg;
+    }
+})
 
 
 function makebubble(){
@@ -30,10 +60,19 @@ function runtimer(){
         else{
 
             clearInterval(timerint);
+            document.querySelector(".nav_button").style.display="none";
             document.querySelector("#bpnl").innerHTML=`<div id ="return_gm_ovr" ><h1>Game Over</h1><button id="strt_btn">Start Again</button></button></div>`;
+
             re_start_btn = document.querySelector("#strt_btn")
             .addEventListener("click",()=>{
-            reset_func();
+                timer = 60;
+                score = 0;
+                document.querySelector(".nav_button").style.display = "block";
+                scoreValRef.textContent = score;
+                makebubble();
+                clearInterval(timerint);
+                runtimer();
+                newhit();
             })
         }
         
@@ -60,10 +99,7 @@ document.querySelector("#bpnl")
 
 
 function reset_func(){
-    timer = 60;
-    score =0;
-    document.querySelector("#timer_value").textContent = timer;
-    document.querySelector("#scoreval").textContent = score;
+    clearInterval(timerint);
     makebubble();
     runtimer();
     newhit();  
@@ -75,6 +111,6 @@ function reset_func(){
 
 
 makebubble();
-runtimer();
-newhit();
+// runtimer();
+// newhit();
 // getscore()
